@@ -1,0 +1,43 @@
+### PRUEBA 1: POST - Crear experiencia (Respuesta esperada: 201 Created)
+POST http://localhost:5000/api/experiencias
+Content-Type: application/json
+
+{
+  "empresa": "Tech Solutions S.A.S.",
+  "cargo": "Desarrollador Backend Junior",
+  "periodo": "Enero 2025 - Junio 2025",
+  "descripcion": "Desarrollo y mantenimiento de APIs REST con Node.js y MongoDB."
+}
+
+###
+
+### PRUEBA 2: GET - Listar experiencias (Respuesta esperada: 200 OK)
+GET http://localhost:5000/api/experiencias
+
+###
+
+### PRUEBA 3: PUT - Actualizar por ID (Respuesta esperada: 200 OK)
+# Reemplaza ID_AQUI por el _id devuelto en la prueba GET
+PUT http://localhost:5000/api/experiencias/6ae64a5474028599d15e62a6
+Content-Type: application/json
+
+{
+  "empresa": "Tech Solutions S.A.S.",
+  "cargo": "Desarrollador Full Stack Senior",
+  "periodo": "Enero 2025 - Presente",
+  "descripcion": "Líder de desarrollo de APIs REST y aplicaciones en React."
+}
+
+###
+
+### PRUEBA 4: DELETE - Eliminar por ID (Respuesta esperada: 200 OK)
+# Reemplaza ID_AQUI por el _id que desees eliminar
+DELETE http://localhost:5000/api/experiencias/6ae64a5474028599d15e62a6
+
+###
+
+### PRUEBA 5: POST Error - Objeto vacío (Respuesta esperada: 400 Bad Request)
+POST http://localhost:5000/api/experiencias
+Content-Type: application/json
+
+{}
